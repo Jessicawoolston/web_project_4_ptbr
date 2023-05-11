@@ -1,0 +1,15 @@
+.profile__new-post {
+    padding: 0;
+    max-width: 150px;
+    max-height: 50px;
+    border: solid 1px #FFFFFF;
+    background-color: black;
+}
+
+@media screen and (max-width: 320px) {
+    .profile__new-post {
+        max-width: 282px;
+        border: solid 1px #FFFFFF;
+        background-color: black;
+    }
+}

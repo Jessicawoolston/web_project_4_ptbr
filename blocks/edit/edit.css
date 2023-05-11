@@ -1,0 +1,14 @@
+.edit {
+    display: flex;
+    background-color: black;
+    border: none;
+    padding: 0;
+    max-height: 40px;
+    max-width: 40px;
+
+}
+
+.edit:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}

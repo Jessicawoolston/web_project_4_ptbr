@@ -1,0 +1,6 @@
+.card__info_position {
+    display: flex;
+    margin: 25px 0;
+    width: 100%;
+    justify-content: center;
+}

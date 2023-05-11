@@ -1,0 +1,40 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+/*----------------------------------PAGE--------------------------*/
+@import url(../blocks/page/page.css);
+/*----------------------------------HEADER------------------------*/
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__line/header__line.css);
+/*----------------------------------CONTENT------------------------*/
+@import url(../blocks/content/content.css);
+
+/*----------------------------------PROFILE-----------------------*/
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__pic/profile__pic.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__title/profile__title.css);
+@import url(../blocks/profile/__explore/profile__explore.css);
+@import url(../blocks/profile/__button/profile__button.css);
+@import url(../blocks/profile/__pen/profile__pen.css);
+@import url(../blocks/profile/__edit/profile__edit.css);
+@import url(../blocks/profile/__add/profile__add.css);
+@import url(../blocks/profile/__new-post/profile__new-post.css);
+@import url(../blocks/profile/__detail/profile__detail.css);
+/*----------------------------------POPUP------------------------*/
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/__form/popup__form.css);
+@import url(../blocks/edit/edit.css);
+@import url(../blocks/edit/__close/edit__close.css);
+/*----------------------------------CARDS-----------------------*/
+@import url(../blocks/cards/cards.css);
+/*----------------------------------CARD-----------------------*/
+@import url(../blocks/card/card.css);
+@import url(../blocks/card/__picture/card__picture.css);
+@import url(../blocks/card/__info/card__info.css);
+@import url(../blocks/card/__info/card__info_position.css);
+@import url(../blocks/card/__text/card__text.css);
+@import url(../blocks/card/__button/card__button.css);
+/*---------------------------------FOOTER---------------------*/
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
