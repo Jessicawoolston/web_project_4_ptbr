@@ -6,7 +6,7 @@
     background-color: black;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 366px) {
     .profile__new-post {
         max-width: 282px;
         border: solid 1px #FFFFFF;

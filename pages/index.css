@@ -1,5 +1,6 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
+@import url(../blocks/root/root.css);
 /*----------------------------------PAGE--------------------------*/
 @import url(../blocks/page/page.css);
 /*----------------------------------HEADER------------------------*/
@@ -22,10 +23,16 @@
 @import url(../blocks/profile/__new-post/profile__new-post.css);
 @import url(../blocks/profile/__detail/profile__detail.css);
 /*----------------------------------POPUP------------------------*/
+@import url(../blocks/overlay/overlay.css);
 @import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/__close/popup__close.css);
+@import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__form/popup__form.css);
-@import url(../blocks/edit/edit.css);
-@import url(../blocks/edit/__close/edit__close.css);
+@import url(../blocks/popup/__box/popup__box.css);
+@import url(../blocks/popup/__name/popup__name.css);
+@import url(../blocks/popup/__about/popup__about.css);
+@import url(../blocks/popup/__save/popup__save.css);
+
 /*----------------------------------CARDS-----------------------*/
 @import url(../blocks/cards/cards.css);
 /*----------------------------------CARD-----------------------*/

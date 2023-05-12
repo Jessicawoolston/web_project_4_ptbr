@@ -1,0 +1,12 @@
+.popup__name {
+    width: 358px;
+    opacity: 0.6;
+    box-sizing: border-box;
+    margin: 54px 0 0;
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.21;
+}

@@ -6,8 +6,15 @@
     width: 100%;
 }
 
+@media screen and (max-width: 920px) {
+    .profile {
+        margin: 40px auto 0 auto;
+        justify-content: center;
+        max-width: 800px;
+    }
+}
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 366px) {
     .profile {
         justify-content: center;
         margin: 38px 19px 0 19px;
