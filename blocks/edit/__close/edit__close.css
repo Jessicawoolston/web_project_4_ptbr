@@ -1,0 +1,6 @@
+.edit__close {
+    display: flex;
+    max-height: 40px;
+
+    max-width: 40px;
+}

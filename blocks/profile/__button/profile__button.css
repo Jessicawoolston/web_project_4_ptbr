@@ -1,0 +1,12 @@
+.profile__button {
+    display: flex;
+    max-width: 24px;
+}
+
+
+@media screen and (max-width: 320px) {
+    .profile__button {
+        padding-left: 10px;
+
+    }
+}
