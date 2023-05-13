@@ -6,6 +6,10 @@
     color: #FFFFFF;
 }
 
+.profile__detail:hover {
+    opacity: 0.6;
+}
+
 @media screen and (max-width: 320px) {
     .profile__detail {
         max-width: 16px;

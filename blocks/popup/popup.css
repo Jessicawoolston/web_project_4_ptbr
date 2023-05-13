@@ -4,4 +4,13 @@
     max-width: 430px;
     max-height: 330px;
     border-radius: 10px;
+    margin: 196px auto;
+}
+
+@media screen and (max-width: 366px) {
+    .popup {
+        max-width: 282px;
+        max-height: 322px;
+        margin: 132px auto 0 auto;
+    }
 }

@@ -4,5 +4,15 @@
     background-color: #000;
     color: white;
     margin: 48px 0px 36px;
+    cursor: pointer;
+}
 
+.popup__save:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 366px) {
+    .popup__save {
+        width: 238px;
+    }
 }

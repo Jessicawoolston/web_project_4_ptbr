@@ -10,3 +10,13 @@
     font-size: 14px;
     line-height: 1.21;
 }
+
+.popup__name::placeholder {
+    color: black;
+}
+
+@media screen and (max-width: 366px) {
+    .popup__name {
+        width: 238px;
+    }
+}

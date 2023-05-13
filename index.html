@@ -28,7 +28,7 @@
         </div>
 
         <div class="profile__button">
-          <button class="profile__edit">
+          <button type="button" class="profile__edit">
             <img class="profile__pen" src="./images/edit.png" alt="imagem de um lapis para editar" />
           </button>
         </div>
@@ -86,8 +86,8 @@
         <div class="card">
           <img src="./images/vanoise.png" class="card__picture"></img>
           <div class="card__info card__info_position">
-            <h2 class="card__text">Vanoise Nationa...</h2>
-            <button class="card__button"> <img class="card__like" src="/images/heart.svg"
+            <h2 class="card__text">Vanoise National Park</h2>
+            <button type="button" class="card__button"> <img class="card__like" src="/images/heart.svg"
                 alt="desenho em forma de coração"></button>
           </div>
 
@@ -110,21 +110,19 @@
         </h3>
       </section>
 
-      <div class="overlay">
+      <div class="overlay" id="overlay">
         <div class="popup">
           <img src="./images/Close Icon.png" alt="fechar janela" class="popup__close">
           <h3 class="popup__title">Editar Perfil</h3>
           <form class="popup__form">
             <label class="popup__box">
-              <input type="text" id="name" class="popup__name" placeholder="Jacques Costeau">
-              <input type="text" id="about" class="popup__about" placeholder="Explorar">
+              <input type="text" id="name" value="name" class="popup__name" placeholder="Nome">
+              <input type="text" id="about" value="about" class="popup__about" placeholder="Sobre mim">
             </label>
-            <button type="submit" class="popup__save">Salvar</button>
+            <button type="submit" class="popup__save" id="save">Salvar</button>
           </form>
         </div>
       </div>
-
-
 
     </main>
   </div>

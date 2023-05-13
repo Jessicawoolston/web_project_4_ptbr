@@ -3,6 +3,10 @@
     max-width: 24px;
 }
 
+.profile__button:hover {
+    opacity: 0.6;
+}
+
 
 @media screen and (max-width: 366px) {
     .profile__button {

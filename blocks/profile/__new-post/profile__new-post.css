@@ -4,6 +4,11 @@
     max-height: 50px;
     border: solid 1px #FFFFFF;
     background-color: black;
+    cursor: pointer;
+}
+
+.profile__new-post:hover {
+    opacity: 0.6;
 }
 
 @media screen and (max-width: 366px) {
