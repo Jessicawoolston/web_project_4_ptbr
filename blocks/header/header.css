@@ -12,3 +12,27 @@
         max-width: 800px;
     }
 }
+
+@media screen and (max-width: 838px) {
+    .header {
+        margin: 0 auto;
+        justify-content: center;
+        max-width: 650px;
+    }
+}
+
+@media screen and (max-width: 696px) {
+    .header {
+        margin: 0 auto;
+        justify-content: center;
+        max-width: 550px;
+    }
+}
+
+@media screen and (max-width: 604px) {
+    .header {
+        margin: 0 auto;
+        justify-content: center;
+        max-width: 450px;
+    }
+}

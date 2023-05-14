@@ -11,7 +11,13 @@
 }
 
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 860px) {
+    .profile__add {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
     .profile__add {
         margin: 0;
     }

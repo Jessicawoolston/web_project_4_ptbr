@@ -5,6 +5,21 @@
     margin-right: 40px;
 }
 
+
+@media screen and (max-width: 860px) {
+    .profile__pic {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 861px) {
+    .profile__pic {
+        position: absolute;
+        top: 150px;
+        margin-right: 0;
+    }
+}
+
 @media screen and (max-width: 366px) {
     .profile__pic {
         margin-right: 0;

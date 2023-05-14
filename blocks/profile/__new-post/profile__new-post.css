@@ -11,7 +11,8 @@
     opacity: 0.6;
 }
 
-@media screen and (max-width: 366px) {
+
+@media screen and (max-width: 860px) {
     .profile__new-post {
         max-width: 282px;
         border: solid 1px #FFFFFF;

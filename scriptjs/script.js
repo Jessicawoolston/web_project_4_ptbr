@@ -10,16 +10,12 @@ const profileAbout = document.querySelector(".profile__explore");
 const name = document.querySelector("#name");
 const about = document.querySelector("#about");
 
-function openPopup() {
-  popup.classList.add("overlay_visible");
+function togglePopup() {
+  popup.classList.toggle("overlay_visible");
 }
 
-function closePopup() {
-  popup.classList.remove("overlay_visible");
-}
-
-openForm.addEventListener("click", openPopup);
-closeForm.addEventListener("click", closePopup);
+openForm.addEventListener("click", togglePopup);
+closeForm.addEventListener("click", togglePopup);
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -33,6 +29,7 @@ function handleFormSubmit(event) {
   event.preventDefault();
   profileName.textContent = name.value;
   profileAbout.textContent = about.value;
+  togglePopup();
 }
 
 const button = document.querySelector(".card__button");
