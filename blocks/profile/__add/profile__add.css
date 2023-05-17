@@ -1,23 +1,10 @@
 .profile__add {
     display: flex;
-    margin: 35px 0 0 152px;
+    margin: 35px 0 0 0;
+
 }
 
-@media screen and (max-width: 920px) {
-    .profile__add {
-        margin: 24px 0 0 24px;
-        padding: 0;
-    }
-}
-
-
-@media screen and (max-width: 860px) {
-    .profile__add {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 625px) {
     .profile__add {
         margin: 0;
     }

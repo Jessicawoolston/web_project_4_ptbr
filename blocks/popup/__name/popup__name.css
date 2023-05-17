@@ -11,7 +11,7 @@
     line-height: 1.21;
 }
 
-.popup__name::placeholder {
+.popup__name-input {
     color: black;
 }
 

@@ -3,13 +3,18 @@
     max-width: 24px;
     max-height: 24px;
     border: solid 1px #FFFFFF;
-    margin-top: 38px;
+    margin: 15px 0 0;
 }
 
-@media screen and (max-width: 550px) {
+.profile__edit:hover {
+    opacity: 0.6;
+}
+
+
+@media screen and (max-width: 625px) {
     .profile__edit {
         max-width: 18px;
         max-height: 18px;
-        margin-top: 29px;
+        margin-top: 5px;
     }
 }
