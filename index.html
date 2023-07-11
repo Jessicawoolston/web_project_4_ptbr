@@ -55,113 +55,30 @@
         </section>
 
         <section class="cards">
-          <div class="card">
-            <img
-              src="./images/yosemite.png"
-              class="card__picture"
-              alt="foto de uma paisagem"
-            />
-            <div class="card__info">
-              <h2 class="card__text">Vale de Yosemite</h2>
-              <button class="card__button">
-                <img
-                  class="card__like"
-                  src="./images/heart.svg"
-                  alt="desenho em forma de coração"
-                />
-              </button>
+          <template id="card-template">
+            <div class="card">
+              <img
+                src="./images/Trash.png"
+                class="card__trash"
+                alt="lata de lixo"
+              />
+              <img
+                src="./images/yosemite.png"
+                class="card__picture"
+                alt="foto de uma paisagem"
+              />
+              <div class="card__info">
+                <h2 class="card__text">Legenda</h2>
+                <button class="card__button">
+                  <img
+                    class="card__like"
+                    src="./images/heart.svg"
+                    alt="desenho em forma de coração"
+                  />
+                </button>
+              </div>
             </div>
-          </div>
-
-          <div class="card">
-            <img
-              src="./images/louise.png"
-              class="card__picture"
-              alt="foto de uma paisagem"
-            />
-            <div class="card__info">
-              <h2 class="card__text">Lago Louise</h2>
-              <button class="card__button">
-                <img
-                  class="card__like"
-                  src="./images/heart.svg"
-                  alt="desenho em forma de coração"
-                />
-              </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              src="./images/mountains.png"
-              class="card__picture"
-              alt="foto de uma paisagem"
-            />
-            <div class="card__info card__info_position">
-              <h2 class="card__text">Montanhas Care...</h2>
-              <button class="card__button">
-                <img
-                  class="card__like"
-                  src="./images/heart.svg"
-                  alt="desenho em forma de coração"
-                />
-              </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              src="./images/latemar.png"
-              class="card__picture"
-              alt="foto de uma paisagem"
-            />
-            <div class="card__info">
-              <h2 class="card__text">Latemar</h2>
-              <button class="card__button">
-                <img
-                  class="card__like"
-                  src="./images/heart.svg"
-                  alt="desenho em forma de coração"
-                />
-              </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              src="./images/vanoise.png"
-              class="card__picture"
-              alt="foto de uma paisagem"
-            />
-            <div class="card__info card__info_position">
-              <h2 class="card__text">Vanoise National Park</h2>
-              <button type="button" class="card__button">
-                <img
-                  class="card__like"
-                  src="./images/heart.svg"
-                  alt="desenho em forma de coração"
-                />
-              </button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              src="./images/braies.png"
-              class="card__picture"
-              alt="foto de uma paisagem"
-            />
-            <div class="card__info">
-              <h2 class="card__text">Lago di Braies</h2>
-              <button class="card__button">
-                <img
-                  class="card__like"
-                  src="./images/heart.svg"
-                  alt="desenho em forma de coração"
-                />
-              </button>
-            </div>
-          </div>
+          </template>
         </section>
 
         <section class="footer">
@@ -181,14 +98,14 @@
                 <input
                   type="text"
                   id="name"
-                  value="name"
+                  required
                   class="popup__name"
                   placeholder="Nome"
                 />
                 <input
                   type="text"
                   id="about"
-                  value="about"
+                  required
                   class="popup__about"
                   placeholder="Sobre mim"
                 />
