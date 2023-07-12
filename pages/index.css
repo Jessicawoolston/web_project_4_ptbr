@@ -32,6 +32,8 @@
 @import url(../blocks/popup/__name/popup__name.css);
 @import url(../blocks/popup/__about/popup__about.css);
 @import url(../blocks/popup/__save/popup__save.css);
+/*-----------------------------------ADD--------------------------*/
+@import url(../blocks/add/add.css);
 
 /*----------------------------------CARDS-----------------------*/
 @import url(../blocks/cards/cards.css);

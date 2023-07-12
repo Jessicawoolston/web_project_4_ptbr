@@ -62,11 +62,7 @@
                 class="card__trash"
                 alt="lata de lixo"
               />
-              <img
-                src="./images/yosemite.png"
-                class="card__picture"
-                alt="foto de uma paisagem"
-              />
+              <img src="" class="card__picture" alt="foto de uma paisagem" />
               <div class="card__info">
                 <h2 class="card__text">Legenda</h2>
                 <button class="card__button">
@@ -114,6 +110,49 @@
                 Salvar
               </button>
             </form>
+          </div>
+        </div>
+
+        <div class="add" id="add">
+          <div class="popup">
+            <img
+              src="./images/CloseIcon.png"
+              alt="fechar janela"
+              class="popup__close"
+            />
+            <h3 class="popup__title">Novo Local</h3>
+            <form class="popup__form popup__form_add">
+              <div class="popup__box">
+                <input
+                  type="text"
+                  id="title"
+                  required
+                  class="popup__name"
+                  placeholder="Título"
+                />
+                <input
+                  type="text"
+                  id="link"
+                  required
+                  class="popup__about"
+                  placeholder="Link de imagem"
+                />
+              </div>
+              <button type="submit" class="popup__save" id="save">Criar</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="Image" id="image">
+          <div class="image__popup">
+            <img src="" alt="Imagem ampliada" class="image__open" />
+            <button class="image__button">
+              <img
+                class="image__close"
+                src="./images/CloseIcon.png"
+                alt="fechar janela"
+              />
+            </button>
           </div>
         </div>
       </main>

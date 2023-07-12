@@ -1,3 +1,5 @@
+//POPUP EDITAR PERFIL
+
 const openForm = document.querySelector(".profile__edit");
 const popup = document.getElementById("overlay");
 const closeForm = document.querySelector(".popup__close");
@@ -32,15 +34,7 @@ function handleFormSubmit(event) {
   togglePopup();
 }
 
-const button = document.querySelector(".card__button");
-
-try {
-  button.addEventListener("click", function () {
-    button.classList.toggle("active");
-  });
-} catch (error) {
-  alert(error);
-}
+//CRIANDO CARDS JS
 
 const initialCards = [
   {
@@ -69,21 +63,65 @@ const initialCards = [
   },
 ];
 
-function createCards() {
+////POPUP ADD CARD
+const openAddPopup = document.querySelector(".profile__new-post");
+const addPopup = document.getElementById("add");
+const closeAddPopup = addPopup.querySelector(".popup__close");
+
+function togglePopup() {
+  addPopup.classList.toggle("add_visible");
+}
+
+openAddPopup.addEventListener("click", togglePopup);
+closeAddPopup.addEventListener("click", togglePopup);
+
+const addPost = document.querySelector(".popup__form.popup__form_add");
+
+addPost.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const titleInput = document.querySelector("#title");
+  const linkInput = document.querySelector("#link");
+
+  const cardData = {
+    name: titleInput.value,
+    link: linkInput.value,
+  };
+
+  createCard(cardData);
+
+  titleInput.value = "";
+  linkInput.value = "";
+
+  togglePopup();
+});
+
+//CARDS INICIAIS
+
+function createInitialCards() {
   const cardTemplate = document.querySelector("#card-template").content;
   const cardsContainer = document.querySelector(".cards");
 
   initialCards.forEach((cardData) => {
-    const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
-    const cardPicElement = cardElement.querySelector(".card__picture");
-    const cardTitleElement = cardElement.querySelector(".card__text");
-
-    cardPicElement.src = cardData.link;
-    cardPicElement.alt = cardData.name;
-    cardTitleElement.textContent = cardData.name;
-
-    cardsContainer.prepend(cardElement);
+    createCard(cardData, cardTemplate, cardsContainer);
   });
 }
 
-createCards();
+createInitialCards();
+
+//CRIAR UM CARD
+
+function createCard(cardData) {
+  const cardTemplate = document.querySelector("#card-template").content;
+  const cardsContainer = document.querySelector(".cards");
+
+  const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
+  const cardPicElement = cardElement.querySelector(".card__picture");
+  const cardTitleElement = cardElement.querySelector(".card__text");
+
+  cardPicElement.src = cardData.link;
+  cardPicElement.alt = cardData.name;
+  cardTitleElement.textContent = cardData.name;
+
+  cardsContainer.prepend(cardElement);
+}
