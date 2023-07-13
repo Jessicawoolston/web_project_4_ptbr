@@ -1,7 +1,9 @@
 .image__popup {
-    position: absolute;
-    top: 90px;
-    margin: 0 auto;
+    max-width: 816px;
+    max-height: 75vh;
+    flex-direction: column;
+    display: flex;
+    margin: auto;
 
 
 }

@@ -39,6 +39,7 @@
 @import url(../blocks/image/__popup/image__popup.css);
 @import url(../blocks/image/__open/image__open.css);
 @import url(../blocks/image/__close/image__close.css);
+@import url(../blocks/image/__caption/image__caption.css);
 
 /*----------------------------------CARDS-----------------------*/
 @import url(../blocks/cards/cards.css);

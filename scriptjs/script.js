@@ -68,12 +68,12 @@ const openAddPopup = document.querySelector(".profile__new-post");
 const addPopup = document.getElementById("add");
 const closeAddPopup = addPopup.querySelector(".popup__close");
 
-function togglePopup() {
+function toggleAddPopup() {
   addPopup.classList.toggle("add_visible");
 }
 
-openAddPopup.addEventListener("click", togglePopup);
-closeAddPopup.addEventListener("click", togglePopup);
+openAddPopup.addEventListener("click", toggleAddPopup);
+closeAddPopup.addEventListener("click", toggleAddPopup);
 
 const addPost = document.querySelector(".popup__form.popup__form_add");
 
@@ -93,7 +93,7 @@ addPost.addEventListener("submit", function (event) {
   titleInput.value = "";
   linkInput.value = "";
 
-  togglePopup();
+  toggleAddPopup();
 });
 
 //CARDS INICIAIS
@@ -130,7 +130,7 @@ function createCard(cardData) {
     });
 
   //POPUP IMAGENS
-  cardElement.addEventListener("click", function () {
+  cardPicElement.addEventListener("click", function () {
     const imageOpen = document.querySelector(".image__open");
     imageOpen.src = cardData.link;
 
@@ -139,6 +139,7 @@ function createCard(cardData) {
     const imagePopup = document.getElementById("image");
     imagePopup.classList.add("overlay_visible");
   });
+
   const imageClose = document.querySelector(".image__close");
   imageClose.addEventListener("click", function () {
     const imagePopup = document.getElementById("image");
@@ -152,8 +153,9 @@ function createCard(cardData) {
 const cardsContainer = document.querySelector(".cards");
 
 cardsContainer.addEventListener("click", function (event) {
-  if (event.target.classList.contains("card__trash")) {
-    const card = event.target.closest(".card");
+  const deleteButton = event.target.closest(".card__trash");
+  if (deleteButton) {
+    const card = deleteButton.closest(".card");
     card.remove();
   }
 });
