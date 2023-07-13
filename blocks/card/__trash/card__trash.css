@@ -5,3 +5,8 @@
     max-height: 19.3px;
     margin: 18px 15px 0;
 }
+
+.card__trash:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}

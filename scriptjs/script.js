@@ -12,12 +12,12 @@ const profileAbout = document.querySelector(".profile__explore");
 const name = document.querySelector("#name");
 const about = document.querySelector("#about");
 
-function togglePopup() {
+function toggleEditPopup() {
   popup.classList.toggle("overlay_visible");
 }
 
-openForm.addEventListener("click", togglePopup);
-closeForm.addEventListener("click", togglePopup);
+openForm.addEventListener("click", toggleEditPopup);
+closeForm.addEventListener("click", toggleEditPopup);
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -31,7 +31,7 @@ function handleFormSubmit(event) {
   event.preventDefault();
   profileName.textContent = name.value;
   profileAbout.textContent = about.value;
-  togglePopup();
+  toggleEditPopup();
 }
 
 //CRIANDO CARDS JS
@@ -63,7 +63,7 @@ const initialCards = [
   },
 ];
 
-////POPUP ADD CARD
+//POPUP CARD
 const openAddPopup = document.querySelector(".profile__new-post");
 const addPopup = document.getElementById("add");
 const closeAddPopup = addPopup.querySelector(".popup__close");
@@ -109,7 +109,7 @@ function createInitialCards() {
 
 createInitialCards();
 
-//CRIAR UM CARD
+//ADICIONAR UM CARD
 
 function createCard(cardData) {
   const cardTemplate = document.querySelector("#card-template").content;
@@ -122,6 +122,38 @@ function createCard(cardData) {
   cardPicElement.src = cardData.link;
   cardPicElement.alt = cardData.name;
   cardTitleElement.textContent = cardData.name;
+  //LIKE ATIVADO
+  cardElement
+    .querySelector(".card__like")
+    .addEventListener("click", function (evt) {
+      evt.target.classList.toggle("card__like_active");
+    });
+
+  //POPUP IMAGENS
+  cardElement.addEventListener("click", function () {
+    const imageOpen = document.querySelector(".image__open");
+    imageOpen.src = cardData.link;
+
+    const imageCaption = document.querySelector(".image__caption");
+    imageCaption.textContent = cardData.name;
+    const imagePopup = document.getElementById("image");
+    imagePopup.classList.add("overlay_visible");
+  });
+  const imageClose = document.querySelector(".image__close");
+  imageClose.addEventListener("click", function () {
+    const imagePopup = document.getElementById("image");
+    imagePopup.classList.remove("overlay_visible");
+  });
 
   cardsContainer.prepend(cardElement);
 }
+
+//DELETAR CARD
+const cardsContainer = document.querySelector(".cards");
+
+cardsContainer.addEventListener("click", function (event) {
+  if (event.target.classList.contains("card__trash")) {
+    const card = event.target.closest(".card");
+    card.remove();
+  }
+});
