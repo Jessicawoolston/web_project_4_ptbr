@@ -8,3 +8,10 @@
 .image__close:hover {
     opacity: 0.6;
 }
+
+@media screen and (max-width: 366px) {
+    .image__close {
+        max-width: 30px;
+        max-height: 30px;
+    }
+}
