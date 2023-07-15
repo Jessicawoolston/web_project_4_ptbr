@@ -1,4 +1,4 @@
-footer {
+.footer {
     display: flex;
     justify-content: flex-start;
     max-height: 78px;
