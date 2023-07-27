@@ -11,9 +11,11 @@ const profileName = document.querySelector(".profile__title");
 const profileAbout = document.querySelector(".profile__explore");
 const name = document.querySelector("#name");
 const about = document.querySelector("#about");
+const title = document.querySelector("#title");
 
 function toggleEditPopup() {
   popup.classList.toggle("overlay_visible");
+  name.focus();
 }
 
 openForm.addEventListener("click", toggleEditPopup);
@@ -21,19 +23,46 @@ closeForm.addEventListener("click", toggleEditPopup);
 
 function handleFormSubmit(event) {
   event.preventDefault();
-  const name = document.querySelector("#name");
-  const about = document.querySelector("#about");
+  profileName.textContent = name.value;
+  profileAbout.textContent = about.value;
+  toggleEditPopup();
+
+  if (!name.value || !about.value) return;
 }
 
 form.addEventListener("submit", handleFormSubmit);
 
-function handleFormSubmit(event) {
-  event.preventDefault();
-  profileName.textContent = name.value;
-  profileAbout.textContent = about.value;
-  toggleEditPopup();
+// FECHAR POPUP
+function closePopup(popupElement) {
+  popupElement.classList.remove("overlay_visible");
+  popupElement.classList.remove("add_visible");
 }
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    const openPopups = document.querySelectorAll(
+      ".overlay_visible, .add_visible"
+    );
+    openPopups.forEach((popup) => {
+      closePopup(popup);
+    });
+  }
+});
 
+const formEdit = document.querySelector(".popup__form[name='formEdit']");
+formEdit.addEventListener("keydown", function (event) {
+  if (event.key === "Enter" && !event.target.checkValidity()) {
+    event.preventDefault();
+  }
+});
+
+const overlays = document.querySelectorAll(".overlay, .add, .image");
+overlays.forEach((overlay) => {
+  overlay.addEventListener("click", function (event) {
+    if (event.target === overlay) {
+      closePopup(overlay);
+    }
+  });
+});
 //CRIANDO CARDS JS
 
 const initialCards = [
@@ -70,6 +99,8 @@ const closeAddPopup = addPopup.querySelector(".popup__close");
 
 function toggleAddPopup() {
   addPopup.classList.toggle("add_visible");
+
+  title.focus();
 }
 
 openAddPopup.addEventListener("click", toggleAddPopup);
@@ -83,6 +114,8 @@ addPost.addEventListener("submit", function (event) {
   const titleInput = document.querySelector("#title");
   const linkInput = document.querySelector("#link");
 
+  if (!titleInput.value || !linkInput.value) return;
+
   const cardData = {
     name: titleInput.value,
     link: linkInput.value,
@@ -95,6 +128,8 @@ addPost.addEventListener("submit", function (event) {
 
   toggleAddPopup();
 });
+
+//Fechar POPUP OVERLAY
 
 //CARDS INICIAIS
 

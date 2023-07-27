@@ -1,4 +1,4 @@
-.popup__name {
+.popup__input {
     width: 358px;
     opacity: 0.6;
     box-sizing: border-box;
@@ -11,12 +11,18 @@
     line-height: 1.21;
 }
 
-.popup__name-input {
+.popup__input_error {
+    border-color: #F00;
+}
+
+.popup__input-input {
     color: black;
 }
 
+
 @media screen and (max-width: 366px) {
-    .popup__name {
+    .popup__input {
+        margin: 0;
         width: 238px;
     }
 }

@@ -3,13 +3,23 @@
     height: 50px;
     background-color: #000;
     color: white;
-    margin: 48px 0px 36px;
+    margin: 31px 0px 36px;
     cursor: pointer;
+}
+
+.popup__save_disabled {
+    background-color: #F6F6F6;
+    color: #000;
+    opacity: 0.20000000298023224;
+    cursor: none;
+    pointer-events: none;
 }
 
 .popup__save:hover {
     opacity: 0.8;
 }
+
+
 
 @media screen and (max-width: 366px) {
     .popup__save {
