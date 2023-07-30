@@ -82,7 +82,7 @@
         </section>
 
         <footer class="footer">
-          <h3 class="footer__copyright">© 2023 Around The U.S.</h3>
+          <h3 class="footer__copyright">&#169; 2023 Around The U.S.</h3>
         </footer>
 
         <div class="image" id="image">
@@ -95,6 +95,7 @@
             <img
               src="./images/mountains.png"
               alt="Imagem ampliada"
+              id="imageOpen"
               class="image__open"
             />
             <div class="image__caption">algo</div>
@@ -174,7 +175,11 @@
                 />
                 <span class="popup__error input-link-error"></span>
               </div>
-              <button type="submit" class="popup__save" id="submit">
+              <button
+                type="submit"
+                class="popup__save popup__save_disabled"
+                id="submit"
+              >
                 Criar
               </button>
             </form>
@@ -182,7 +187,7 @@
         </div>
       </main>
     </div>
-    <script src="scriptjs/script.js"></script>
+    <script src="scriptjs/index.js"></script>
     <script src="scriptjs/validate.js"></script>
   </body>
 </html>

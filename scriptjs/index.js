@@ -9,44 +9,57 @@ const saveinfo = document.querySelector("#save");
 
 const profileName = document.querySelector(".profile__title");
 const profileAbout = document.querySelector(".profile__explore");
-const name = document.querySelector("#name");
+const user = document.querySelector("#name");
 const about = document.querySelector("#about");
 const title = document.querySelector("#title");
 
 function toggleEditPopup() {
   popup.classList.toggle("overlay_visible");
-  name.focus();
+  user.focus();
+}
+
+function resetForm(formElement) {
+  formElement.reset();
+}
+
+function handleCloseEditPopup() {
+  resetForm(form);
+  toggleEditPopup();
 }
 
 openForm.addEventListener("click", toggleEditPopup);
-closeForm.addEventListener("click", toggleEditPopup);
+closeForm.addEventListener("click", handleCloseEditPopup);
 
 function handleFormSubmit(event) {
   event.preventDefault();
-  profileName.textContent = name.value;
+  profileName.textContent = user.value;
   profileAbout.textContent = about.value;
   toggleEditPopup();
 
-  if (!name.value || !about.value) return;
+  if (!user.value || !about.value) return;
 }
 
 form.addEventListener("submit", handleFormSubmit);
 
-// FECHAR POPUP
+// FECHHAR POPUP - ESC
 function closePopup(popupElement) {
   popupElement.classList.remove("overlay_visible");
   popupElement.classList.remove("add_visible");
 }
-document.addEventListener("keydown", function (event) {
+
+function escKeydownHandler(event) {
   if (event.key === "Escape") {
-    const openPopups = document.querySelectorAll(
+    const openPopup = document.querySelectorAll(
       ".overlay_visible, .add_visible"
     );
-    openPopups.forEach((popup) => {
+    openPopup.forEach((popup) => {
       closePopup(popup);
+      popup.removeEventListener("keydown", escKeydownHandler);
     });
   }
-});
+}
+
+document.addEventListener("keydown", escKeydownHandler);
 
 const formEdit = document.querySelector(".popup__form[name='formEdit']");
 formEdit.addEventListener("keydown", function (event) {
@@ -97,22 +110,25 @@ const openAddPopup = document.querySelector(".profile__new-post");
 const addPopup = document.getElementById("add");
 const closeAddPopup = addPopup.querySelector(".popup__close");
 
+const addPost = document.querySelector(".popup__form_add.popup__form_add");
+const titleInput = document.querySelector("#title");
+const linkInput = document.querySelector("#link");
+
 function toggleAddPopup() {
   addPopup.classList.toggle("add_visible");
-
   title.focus();
 }
 
-openAddPopup.addEventListener("click", toggleAddPopup);
-closeAddPopup.addEventListener("click", toggleAddPopup);
+function handleCloseAddPopup() {
+  resetForm(addPost);
+  toggleAddPopup();
+}
 
-const addPost = document.querySelector(".popup__form.popup__form_add");
+openAddPopup.addEventListener("click", toggleAddPopup);
+closeAddPopup.addEventListener("click", handleCloseAddPopup);
 
 addPost.addEventListener("submit", function (event) {
   event.preventDefault();
-
-  const titleInput = document.querySelector("#title");
-  const linkInput = document.querySelector("#link");
 
   if (!titleInput.value || !linkInput.value) return;
 
@@ -128,8 +144,6 @@ addPost.addEventListener("submit", function (event) {
 
   toggleAddPopup();
 });
-
-//Fechar POPUP OVERLAY
 
 //CARDS INICIAIS
 
@@ -171,6 +185,7 @@ function createCard(cardData) {
 
     const imageCaption = document.querySelector(".image__caption");
     imageCaption.textContent = cardData.name;
+    imageOpen.alt = cardData.name;
     const imagePopup = document.getElementById("image");
     imagePopup.classList.add("overlay_visible");
   });

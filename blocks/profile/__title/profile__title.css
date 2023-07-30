@@ -5,6 +5,7 @@
     line-height: 48px;
     color: #FFFFFF;
     margin: 0;
+    overflow: hidden;
 
 
 }
@@ -15,6 +16,7 @@
         font-weight: 500;
         font-size: 26px;
         text-align: center;
+
     }
 }
 
