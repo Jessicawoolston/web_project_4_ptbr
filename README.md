@@ -4,6 +4,7 @@ Este projeto tem o propósito de colocar em prática o que estou aprendendo no c
 A interface do site permite o usuário criar, editar, excluir postagens e curtir(dar "like"), nas fotos já adicionadas.
 
 
+
 ### Visão geral
 Tecnologias Utilizadas: 
 
