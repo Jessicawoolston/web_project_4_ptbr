@@ -8,12 +8,12 @@ A interface do site permite o usuário criar, editar, excluir postagens e curtir
 ### Visão geral
 Tecnologias Utilizadas: 
 
-*Introdução
-*Figma
-*Imagens
-*Grid
-*HTML & CSS
-*JavaScript
+-Introdução
+-Figma
+-Imagens
+-Grid
+-HTML & CSS
+-JavaScript
 
 
 **Figma**
