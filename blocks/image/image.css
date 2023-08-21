@@ -7,10 +7,13 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-   
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+
 
 }
 
 .overlay_visible {
     visibility: visible;
+    opacity: 1;
 }
