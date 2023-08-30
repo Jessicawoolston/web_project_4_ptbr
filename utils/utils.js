@@ -2,7 +2,8 @@ const openForm = document.querySelector(".profile__edit");
 const popup = document.getElementById("overlay");
 const closeForm = document.querySelector(".popup__close");
 const form = document.querySelector(".popup__form");
-
+const imageOpen = document.querySelector(".image__open");
+const imageCaption = document.querySelector(".image__caption");
 const profileName = document.querySelector(".profile__title");
 const profileAbout = document.querySelector(".profile__explore");
 const user = document.querySelector("#name");
@@ -42,7 +43,7 @@ function handleFormSubmit(event) {
 
 form.addEventListener("submit", handleFormSubmit);
 
-// FECHAR POPUP
+//FECHAR POPUP
 function closePopup(popupElement) {
   popupElement.classList.remove("overlay_visible");
   popupElement.classList.remove("add_visible");

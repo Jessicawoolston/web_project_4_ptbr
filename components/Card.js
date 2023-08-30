@@ -1,8 +1,9 @@
 class Card {
-  constructor(data, cardSelector, toggleAddPopup) {
+  constructor(data, cardSelector, toggleAddPopup, handleCardClick) {
     this._link = data.link;
     this._name = data.name;
     this._cardSelector = cardSelector;
+    this._handleCardClick = handleCardClick.bind(this);
     this._toggleAddPopup = toggleAddPopup;
   }
 
@@ -28,6 +29,8 @@ class Card {
 
     const cardImage = cardElement.querySelector(".card__picture");
     cardImage.addEventListener("click", () => {
+      this._handleCardClick(this._link, this._name);
+
       const imageOpen = document.querySelector(".image__open");
       imageOpen.src = this._link;
       const imageCaption = document.querySelector(".image__caption");

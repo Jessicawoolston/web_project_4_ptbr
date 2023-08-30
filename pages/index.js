@@ -1,8 +1,11 @@
-import Card from "./Card.js";
-import FormValidator from "./FormValidator.js";
-import { toggleAddPopup } from "./utils.js";
+import Card from "../components/Card.js";
+import FormValidator from "../components/FormValidator.js";
+import Section from "../components/Section.js";
+//import PopupWithImage from "../components/PopupWithImage.js";
+// import PopupWithForm from "../components/PopupWithForm.js";
+// import UserInfo from "../components/UserInfo.js";
 
-const initialCards = [
+const items = [
   {
     name: "Vale de Yosemite",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg",
@@ -29,14 +32,30 @@ const initialCards = [
   },
 ];
 
-function startCard(initialCards) {
-  const cardContainer = document.querySelector(".cards");
-  initialCards.forEach(function (initialCard) {
-    const newCard = new Card(initialCard, "#card-template", toggleAddPopup);
-    const cardElement = newCard.generateCard();
-    cardContainer.append(cardElement);
-  });
-}
+const section = new Section(
+  {
+    items,
+    renderer: (item) => {
+      const card = new Card(item, "#card-template", handleCardClick);
+      const cardElement = card.generateCard();
+      section.addItem(cardElement);
+    },
+  },
+  ".cards"
+);
+
+section.renderItems();
+
+// function startCard(initialCards) {
+//   const cardContainer = document.querySelector(".cards");
+//   initialCards.forEach(function (initialCard) {
+//     const newCard = new Card(initialCard, "#card-template");
+//     const cardElement = newCard.generateCard();
+//     cardContainer.append(cardElement);
+//   });
+// }
+
+// startCard(items);
 
 function FormValidation() {
   const data = {
@@ -55,5 +74,4 @@ function FormValidation() {
   addFormValidator.enableValidation();
 }
 
-startCard(initialCards);
 FormValidation();
