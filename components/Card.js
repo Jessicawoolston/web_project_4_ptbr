@@ -29,13 +29,15 @@ class Card {
 
     const cardImage = cardElement.querySelector(".card__picture");
     cardImage.addEventListener("click", () => {
-      this._handleCardClick(this._link, this._name);
+      this._handleCardClick(this._imageUrl, this._imageName);
 
       const imageOpen = document.querySelector(".image__open");
-      imageOpen.src = this._link;
       const imageCaption = document.querySelector(".image__caption");
-      imageCaption.textContent = this._name;
       const imagePopup = document.getElementById("image");
+
+      imageOpen.src = this._link;
+      imageCaption.textContent = this._name;
+
       imagePopup.classList.add("overlay_visible");
     });
   }

@@ -1,7 +1,7 @@
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
 import Section from "../components/Section.js";
-//import PopupWithImage from "../components/PopupWithImage.js";
+import PopupWithImage from "../components/PopupWithImage.js";
 // import PopupWithForm from "../components/PopupWithForm.js";
 // import UserInfo from "../components/UserInfo.js";
 
@@ -32,11 +32,16 @@ const items = [
   },
 ];
 
+const popupWithImage = new PopupWithImage();
+popupWithImage.setEventListeners();
+
 const section = new Section(
   {
     items,
     renderer: (item) => {
-      const card = new Card(item, "#card-template", handleCardClick);
+      const card = new Card(item, "#card-template", (imageUrl, imageName) => {
+        popupWithImage.open(imageUrl, imageName);
+      });
       const cardElement = card.generateCard();
       section.addItem(cardElement);
     },
